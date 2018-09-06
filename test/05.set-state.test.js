@@ -13,59 +13,6 @@ test.beforeEach(t => {
   t.context.root = root;
 });
 
-/*
-test("render component", t => {
-  const root = t.context.root;
-  class FooComponent extends Component {
-    render() {
-      return (
-        <div>
-          <b />
-          <a href="foo" />
-        </div>
-      );
-    }
-  }
-  render(<FooComponent />, root);
-  t.is(root.innerHTML, '<div><b></b><a href="foo"></a></div>');
-});
-
-test("render nested component", t => {
-  const root = t.context.root;
-  class ItemComponent extends Component {
-    render() {
-      return (
-        <li>
-          <div id='item'>
-            {this.props.name}
-          </div>
-        </li>
-      );
-    }
-  }
-
-  class ListComponent extends Component {
-    render() {
-      return (
-      <div id='list'>
-        <ul>
-          {
-            [1, 2].map(name => {
-              return <ItemComponent name={name} />
-            })
-          }
-        </ul>
-      </div>
-      )
-    }
-  }
-
-  render(<ListComponent />, root);
-  t.is(root.innerHTML, '<div id="list"><ul><li><div id="item">1</div></li><li><div id="item">2</div></li></ul></div>');
-});
-
-*/
-
 test("change state on click", t => {
   const root = t.context.root;
   class FooComponent extends Component {
@@ -97,4 +44,3 @@ function click(dom) {
   evt.initEvent("click", false, true);
   dom.dispatchEvent(evt);
 }
-
